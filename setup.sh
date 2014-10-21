@@ -22,3 +22,6 @@ if ! wp core is-installed; then
 	wp db create
 	wp core multisite-install --url=vip.dev --title="WordPress.com VIP" --admin_user=wordpress --admin_password=wordpress --admin_email=wordpress@wordpress.com
 fi
+
+sudo cp "$DIR/config/vip-nginx-conf" "/etc/nginx/sites-enabled/0-vip"
+sudo service nginx restart
