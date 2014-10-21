@@ -19,7 +19,6 @@ fi
 
 # Install WordPress
 if ! wp core is-installed; then
-	wp core config --dbname=vip --dbuser=root
 	wp db create
 	wp core multisite-install --url=vip.dev --title="WordPress.com VIP" --admin_user=wordpress --admin_password=wordpress --admin_email=wordpress@wordpress.com
 fi

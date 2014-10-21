@@ -1,6 +1,5 @@
 .DS_Store
 *.zip
 
-/wp-config.php
 /wp
 /wp-content/themes
