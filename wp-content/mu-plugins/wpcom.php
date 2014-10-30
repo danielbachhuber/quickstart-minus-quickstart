@@ -25,10 +25,11 @@ add_filter( 'global_terms_enabled', '__return_true' );
 
 // Disable automatic creation of intermediate images
 add_filter( 'intermediate_image_sizes', function( $sizes ) {
-    if ( defined( 'JETPACK_DEV_DEBUG' ) && JETPACK_DEV_DEBUG )
-	return array();
-
-    return $sizes;
+	if ( defined( 'JETPACK_DEV_DEBUG' ) && JETPACK_DEV_DEBUG ) {
+		return $sizes;
+	} else {
+		return array();
+	}
 });
 
 // Check alloptions on every pageload
