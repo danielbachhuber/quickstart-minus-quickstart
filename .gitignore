@@ -1,7 +1,9 @@
 .DS_Store
 *.zip
+/local-config.php
 
 /wp
 /wp-content/plugins
+/wp-content/mu-plugins/local.php
 /wp-content/themes
 /wp-content/uploads
