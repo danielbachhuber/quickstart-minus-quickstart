@@ -2,7 +2,9 @@ server {
   listen 80;
   server_name vip.dev;
 
-  root /srv/www/vip.dev; 
+  root /srv/www/vip.dev;
+  
+  client_max_body_size 50M;
 
   index index.html index.php;
 
