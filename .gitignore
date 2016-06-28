@@ -1,6 +1,7 @@
 .DS_Store
 *.zip
 /local-config.php
+wp-cli.local.yml
 
 /wp
 /wp-content/plugins
