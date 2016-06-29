@@ -9,13 +9,14 @@ Version: 1.2
 */
 
 // Do not load if our advanced-cache.php isn't loaded
-if ( ! is_object($batcache) || ! method_exists( $wp_object_cache, 'incr' ) )
+if ( ! isset( $batcache ) || ! is_object( $batcache ) || ! method_exists( $wp_object_cache, 'incr' ) ) {
 	return;
+}
 
 $batcache->configure_groups();
 
 // Regen home and permalink on posts and pages
-add_action('clean_post_cache', 'batcache_post');
+#add_action('clean_post_cache', 'batcache_post');
 
 // Regen permalink on comments (TODO)
 //add_action('comment_post',          'batcache_comment');
@@ -42,4 +43,3 @@ function batcache_clear_url($url) {
 	wp_cache_add("{$url_key}_version", 0, $batcache->group);
 	return wp_cache_incr("{$url_key}_version", 1, $batcache->group);
 }
-
