@@ -5,6 +5,7 @@ wp-cli.local.yml
 
 /wp
 /wp-content/plugins
+/wp-content/mu-plugins/http-concat/
 /wp-content/mu-plugins/local.php
 /wp-content/themes
 /wp-content/uploads
