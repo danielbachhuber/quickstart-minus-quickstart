@@ -1,6 +1,6 @@
 <?php
 
-define( 'WP_CACHE', true );
+define( 'WP_CACHE', false );
 
 // utility variables that are use a bunch of times
 $_batcache_script_name = basename( $_SERVER['SCRIPT_NAME'] );
