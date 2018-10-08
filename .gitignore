@@ -4,6 +4,7 @@
 wp-cli.local.yml
 
 /wp
+/wp-content/object-cache.php
 /wp-content/plugins
 /wp-content/mu-plugins/http-concat/
 /wp-content/mu-plugins/local.php
