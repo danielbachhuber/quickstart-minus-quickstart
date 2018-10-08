@@ -58,6 +58,8 @@ define( 'SUBDOMAIN_INSTALL', false );
 }
 if ( file_exists( __DIR__ . '/wp-content/plugins/jetpack/class.jetpack-user-agent.php' ) ) {
 require_once( __DIR__ . '/wp-content/plugins/jetpack/class.jetpack-user-agent.php' );
+} else {
+require __DIR__ . '/config/is-mobile.php';
 }
 require __DIR__ . '/config/batcache-config.php';
 require __DIR__ . '/config/roles.php';
